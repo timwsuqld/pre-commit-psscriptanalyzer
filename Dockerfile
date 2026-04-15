@@ -2,7 +2,7 @@
 # Copyright © 2024 Ophios GmbH
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-FROM mcr.microsoft.com/powershell:lts-alpine
+FROM mcr.microsoft.com/powershell:lts-alpine-3.20
 
 RUN pwsh -Command \
     "Set-PSRepository -ErrorAction Stop -InstallationPolicy Trusted -Name PSGallery -Verbose; \
