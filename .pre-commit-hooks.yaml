@@ -22,7 +22,7 @@
 - id: psscriptanalyzer-check-docker
   name: check PowerShell code using PSScriptAnalyzer
   language: docker
-  entry: -Check
+  entry: pwsh -Command /usr/local/bin/PSScriptAnalyzer-wrapper.ps1 -Check
   args:
     - -ExcludeRule
     - PSUseBOMForUnicodeEncodedFile
@@ -34,7 +34,7 @@
 - id: psscriptanalyzer-format-docker
   name: format PowerShell code using PSScriptAnalyzer
   language: docker
-  entry: -Format
+  entry: pwsh -Command /usr/local/bin/PSScriptAnalyzer-wrapper.ps1 -Format
   types:
     - file
   files: \.ps[dm]?1$
